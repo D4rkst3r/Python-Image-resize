@@ -20,7 +20,7 @@ Ein einfaches Tool zum Ändern der Größe von Bildern mit einer grafischen Benu
 
 1. Klone das Repository:
    ```bash
-   git clone https://github.com/Darkster3369/Python-Image-resize.git
+   git clone https://github.com/D4rkst3r/Python-Image-resize.git
 
 2. Navigiere in das Verzeichnis:
    ```bash
@@ -64,6 +64,6 @@ Erstelle eine `requirements.txt`-Datei, um die benötigten Pakete zu spezifizier
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/Darkster3369/Python-Image-resize.git
+   git remote add origin https://github.com/D4rkst3r/Python-Image-resize.git
    git push -u origin main
 
