@@ -1,56 +1,59 @@
-# Image Resizer
+# Image Resizer - Multiview with Custom Names
 
-Ein einfaches Tool zum Ändern der Größe von Bildern mit einer grafischen Benutzeroberfläche (GUI). Entwickelt mit Hilfe von ChatGPT.
+A Python application that allows you to select multiple images, view them in a grid, adjust their resolution, and save them with custom names.
 
-## Funktionen
+## Features
 
-- Mehrere Bilder gleichzeitig auswählen und deren Größe ändern
-- Individuelle Namen für jedes Bild festlegen
-- Multiview-Ansicht für die Bildvorschau
-- Dark Mode für eine angenehme Nutzung bei jedem Lichtverhältnis
+- Select multiple images and view them in a grid layout.
+- Resize images and save them with custom names.
+- Supports a dark mode interface.
 
-## Verwendung
+## Supported Versions
 
-1. Wähle die Bilder aus, die du bearbeiten möchtest.
-2. Gib die gewünschte Breite und Höhe ein.
-3. Ändere die Namen der Bilder nach Belieben.
-4. Speichere die bearbeiteten Bilder in einem Zielordner.
+### Python
+
+- Python 3.7 or higher
+
+### Dependencies
+
+- **Pillow**: 8.0.0 or higher
+- **tkinter**: Included with standard Python installations (no separate installation required)
 
 ## Installation
 
-1. Klone das Repository:
-   ```bash
-   git clone https://github.com/D4rkst3r/Python-Image-resize.git
-
-2. Navigiere in das Verzeichnis:
-   ```bash
-    cd image_resizer
-
-3. Installiere die benötigten Pakete:
-   ```bash
+1. Clone this repository:
+    ```sh
+    git clone https://github.com/yourusername/image-resizer.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd image-resizer
+    ```
+3. Install the required Python packages:
+    ```sh
     pip install -r requirements.txt
+    ```
 
-4. Führe das Programm aus:
-   ```bash
-   python image_resizer.py
+## Usage
 
-## Anforderungen
-1. Python 3.x
-2. Pillow
+1. Run the application:
+    ```sh
+    python image_resize.py
+    ```
+2. Use the interface to select images, adjust their size, and save them with new names.
 
-## Lizenz
-Dieses Projekt ist unter der MIT-Lizenz lizenziert.
+## License
 
-## Danksagung
-Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung dieses Tools!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Contributing
 
-### 4. **Requirements-Datei**
+If you would like to contribute to this project, please fork the repository and submit a pull request.
 
-Um die in der requirements.txt-Datei aufgelisteten Pakete zu installieren, können Sie den folgenden Befehl ausführen:
-  ```bash
-   pip install -r requirements.txt
+## Issues
 
+If you encounter any issues, please open an issue in the [GitHub Issues](https://github.com/D4rkst3r/image-resizer/issues) section of this repository.
 
+## Contact
 
-
+For any questions or feedback, please contact [your.email@example.com](az3198284@gmail.com).
