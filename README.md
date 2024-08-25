@@ -20,7 +20,7 @@ Ein einfaches Tool zum Ändern der Größe von Bildern mit einer grafischen Benu
 
 1. Klone das Repository:
    ```bash
-   git clone https://github.com/dein-benutzername/image_resizer.git
+   git clone https://github.com/Darkster3369/Python-Image-resize.git
 
 2. Navigiere in das Verzeichnis:
 ```bash
