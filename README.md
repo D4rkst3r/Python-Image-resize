@@ -1,6 +1,8 @@
 # Image Resizer - Multiview with Custom Names
 
 A Python application that allows you to select multiple images, view them in a grid, adjust their resolution, and save them with custom names.
+![image_resize_nKYIDNGk0k](https://github.com/user-attachments/assets/1292122e-1cd7-44cc-8a60-c35c0a450df2)
+
 
 ## Features
 
@@ -44,7 +46,7 @@ A Python application that allows you to select multiple images, view them in a g
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE]([LICENSE](https://github.com/D4rkst3r/Python-Image-resize/blob/main/LICENSE.md)) file for details.
 
 ## Danksagung
 Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung dieses Tools!
