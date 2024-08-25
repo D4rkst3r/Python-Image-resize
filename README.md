@@ -23,7 +23,7 @@ A Python application that allows you to select multiple images, view them in a g
 
 1. Clone this repository:
     ```sh
-    git clone https://github.com/yourusername/image-resizer.git
+    git clone https://github.com/D4rkst3r/Python-Image-resize.git
     ```
 2. Navigate to the project directory:
     ```sh
