@@ -50,12 +50,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung dieses Tools!
 
 
-### 4. **Requirements-Datei**
-
-Um die in der requirements.txt-Datei aufgelisteten Pakete zu installieren, können Sie den folgenden Befehl ausführen:
-  ```bash
-   pip install -r requirements.txt
-
-
 
 
