@@ -23,15 +23,15 @@ Ein einfaches Tool zum Ändern der Größe von Bildern mit einer grafischen Benu
    git clone https://github.com/Darkster3369/Python-Image-resize.git
 
 2. Navigiere in das Verzeichnis:
-```bash
+   ```bash
     cd image_resizer
 
 3. Installiere die benötigten Pakete:
-```bash
+   ```bash
     pip install -r requirements.txt
 
 4. Führe das Programm aus:
-```bash
+   ```bash
    python image_resizer.py
 
 ## Anforderungen
