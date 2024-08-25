@@ -15,9 +15,10 @@ resolution_labels = []
 canvas_frame = None
 
 def select_images():
-    file_paths = filedialog.askopenfilenames(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp")])
+    """Öffnet einen Dialog zur Auswahl von Bildern und zeigt die Vorschauen an."""
+    global images, img_thumbnails, file_paths_list, entry_names, resolution_labels, canvas_frame
+    file_paths = filedialog.askopenfilenames(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp;*.gif;*.tiff")])
     if file_paths:
-        global images, img_thumbnails, file_paths_list, entry_names, resolution_labels, canvas_frame
         images = [Image.open(fp) for fp in file_paths]
         file_paths_list = file_paths
         img_thumbnails = []
@@ -42,8 +43,8 @@ def select_images():
             entry_height.insert(0, height)
 
 def display_multiview():
+    """Zeigt die Bilder in einer Rasteransicht an."""
     global canvas_frame
-    # Zerstöre das alte Frame, wenn es existiert
     if canvas_frame:
         canvas_frame.destroy()
 
@@ -80,11 +81,13 @@ def display_multiview():
     canvas.configure(scrollregion=canvas.bbox("all"))
 
 def update_resolution_display(index):
+    """Aktualisiert das Auflösungslabel für das angegebene Bild."""
     if images and 0 <= index < len(images):
         width, height = images[index].size
         resolution_labels[index].config(text=f"Resolution: {width} x {height}")
 
 def resize_images():
+    """Ändert die Größe der Bilder und speichert sie im ausgewählten Verzeichnis."""
     if images:
         try:
             width = int(entry_width.get())
@@ -113,6 +116,7 @@ root.title("Image Resizer - Multiview with Custom Names")
 
 # Setze die Standardgröße des Fensters
 root.geometry(f"{DEFAULT_WIDTH}x600")  # Breite 1024px, Höhe 600px
+root.resizable(True, True)
 
 # Dark Mode Farben
 bg_color = "#2E2E2E"
@@ -126,16 +130,9 @@ canvas_bg_color = "#5E5E5E"
 # Setze den Hintergrund der Hauptfläche
 root.configure(bg=bg_color)
 
-# Layout
-# Canvas und Scrollbars
-canvas = tk.Canvas(root, bg=canvas_bg_color)
-scroll_x = tk.Scrollbar(root, orient="horizontal", command=canvas.xview)
-scroll_y = tk.Scrollbar(root, orient="vertical", command=canvas.yview)
-canvas.configure(xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
-
 # Layout für die Buttons und Eingabefelder
 controls_frame = tk.Frame(root, bg=bg_color)
-controls_frame.grid(row=0, column=0, sticky="nsw")
+controls_frame.grid(row=0, column=0, sticky="nsw", padx=10, pady=10)
 
 btn_select = tk.Button(controls_frame, text="Select Images", command=select_images, bg=btn_bg_color, fg=btn_fg_color)
 btn_select.grid(row=0, column=0, pady=10)
@@ -155,8 +152,12 @@ entry_height.grid(row=2, column=1)
 btn_resize = tk.Button(controls_frame, text="Resize & Save All", command=resize_images, bg=btn_bg_color, fg=btn_fg_color)
 btn_resize.grid(row=3, column=0, columnspan=2, pady=10)
 
+# Canvas und Scrollbars
+canvas = tk.Canvas(root, bg=canvas_bg_color)
+scroll_x = tk.Scrollbar(root, orient="horizontal", command=canvas.xview)
+scroll_y = tk.Scrollbar(root, orient="vertical", command=canvas.yview)
+canvas.configure(xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
 
-# Layout Konfiguration
 canvas.grid(row=0, column=1, sticky="nsew")
 scroll_x.grid(row=1, column=1, sticky="ew")
 scroll_y.grid(row=0, column=2, sticky="ns")
