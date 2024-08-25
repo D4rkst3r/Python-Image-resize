@@ -14,6 +14,9 @@ entry_names = []
 resolution_labels = []
 canvas_frame = None
 
+# Bildformate zur Auswahl
+FORMATS = [("PNG", "png"), ("JPEG", "jpeg"), ("BMP", "bmp"), ("GIF", "gif"), ("TIFF", "tiff")]
+
 def select_images():
     """Öffnet einen Dialog zur Auswahl von Bildern und zeigt die Vorschauen an."""
     global images, img_thumbnails, file_paths_list, entry_names, resolution_labels, canvas_frame
@@ -96,15 +99,27 @@ def resize_images():
             messagebox.showerror("Error", "Please enter valid numeric values for width and height.")
             return
 
+        # Bestimme das Format aus der Dropdown-Auswahl
+        selected_format = format_var.get()
+        if not selected_format:
+            messagebox.showerror("Error", "Please select an image format.")
+            return
+
         save_dir = filedialog.askdirectory()
         if save_dir:
             for i, img in enumerate(images):
                 resized_img = img.resize((width, height))
-                
+
+                # Konvertiere das Bild in den richtigen Modus, wenn nötig
+                if selected_format == "jpeg" and img.mode in ["RGBA", "LA"]:
+                    resized_img = resized_img.convert("RGB")
+
                 # Nutze den Namen aus dem jeweiligen Eingabefeld
-                new_name = entry_names[i].get() + os.path.splitext(file_paths_list[i])[1]
+                new_name = entry_names[i].get() + "." + selected_format
                 save_path = os.path.join(save_dir, new_name)
-                resized_img.save(save_path)
+                
+                # Speichern im gewählten Format
+                resized_img.save(save_path, format=selected_format.upper())
                 
             messagebox.showinfo("Success", "All images have been resized and saved.")
         else:
@@ -149,8 +164,16 @@ label_height.grid(row=2, column=0)
 entry_height = tk.Entry(controls_frame, bg=entry_bg_color, fg=entry_fg_color)
 entry_height.grid(row=2, column=1)
 
+# Format-Auswahl
+label_format = tk.Label(controls_frame, text="Format:", bg=bg_color, fg=fg_color)
+label_format.grid(row=3, column=0)
+
+format_var = tk.StringVar(value="png")  # Default Format
+format_menu = tk.OptionMenu(controls_frame, format_var, *dict(FORMATS).values())
+format_menu.grid(row=3, column=1, padx=5, pady=5)
+
 btn_resize = tk.Button(controls_frame, text="Resize & Save All", command=resize_images, bg=btn_bg_color, fg=btn_fg_color)
-btn_resize.grid(row=3, column=0, columnspan=2, pady=10)
+btn_resize.grid(row=4, column=0, columnspan=2, pady=10)
 
 # Canvas und Scrollbars
 canvas = tk.Canvas(root, bg=canvas_bg_color)
