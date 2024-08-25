@@ -46,14 +46,16 @@ A Python application that allows you to select multiple images, view them in a g
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
+## Danksagung
+Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung dieses Tools!
 
-If you would like to contribute to this project, please fork the repository and submit a pull request.
 
-## Issues
+### 4. **Requirements-Datei**
 
-If you encounter any issues, please open an issue in the [GitHub Issues](https://github.com/D4rkst3r/image-resizer/issues) section of this repository.
+Um die in der requirements.txt-Datei aufgelisteten Pakete zu installieren, können Sie den folgenden Befehl ausführen:
+  ```bash
+   pip install -r requirements.txt
 
-## Contact
 
-For any questions or feedback, please contact [your.email@example.com](az3198284@gmail.com).
+
+
