@@ -35,8 +35,8 @@ Ein einfaches Tool zum Ändern der Größe von Bildern mit einer grafischen Benu
    python image_resizer.py
 
 ## Anforderungen
-### Python 3.x
-### Pillow
+1. Python 3.x
+2. Pillow
 
 ## Lizenz
 Dieses Projekt ist unter der MIT-Lizenz lizenziert.
