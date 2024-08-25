@@ -44,7 +44,7 @@ A Python application that allows you to select multiple images, view them in a g
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE]([LICENSE](https://github.com/D4rkst3r/Python-Image-resize/blob/main/LICENSE.md)) file for details.
 
 ## Danksagung
 Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung dieses Tools!
