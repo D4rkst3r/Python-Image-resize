@@ -47,23 +47,10 @@ Ein besonderer Dank geht an ChatGPT für die Unterstützung bei der Entwicklung 
 
 ### 4. **Requirements-Datei**
 
-Erstelle eine `requirements.txt`-Datei, um die benötigten Pakete zu spezifizieren:
+Um die in der requirements.txt-Datei aufgelisteten Pakete zu installieren, können Sie den folgenden Befehl ausführen:
+  ```bash
+   pip install -r requirements.txt
 
 
-### 5. **Projekt auf GitHub hochladen**
 
-1. **Erstelle ein neues Repository auf GitHub:**
-   - Gehe zu [GitHub](https://github.com/) und erstelle ein neues Repository.
-
-2. **Füge die Projektdateien hinzu:**
-
-   Navigiere in das Verzeichnis deines Projekts und führe die folgenden Befehle aus:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/D4rkst3r/Python-Image-resize.git
-   git push -u origin main
 
