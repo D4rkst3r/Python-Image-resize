@@ -18,7 +18,7 @@ def select_images():
         # Erstelle Thumbnails und zeige mehrere Bilder gleichzeitig an
         for img in images:
             thumbnail = img.copy()
-            thumbnail.thumbnail((256, 256))  # Kleine Vorschaugröße für Multiview
+            thumbnail.thumbnail((150, 150))  # Kleine Vorschaugröße für Multiview
             img_thumbnails.append(ImageTk.PhotoImage(thumbnail))
 
         display_multiview()
